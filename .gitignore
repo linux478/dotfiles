@@ -2,3 +2,6 @@
 .ssh
 .vim
 .viminfo
+.lesshst
+.wget-hsts
+git
