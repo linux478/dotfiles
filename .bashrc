@@ -62,3 +62,9 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+[[ -d .bash ]] || git clone https://github.com/linux478/bash.git .bash
+
+for i in .bash/*; do
+  source $i;
+done
