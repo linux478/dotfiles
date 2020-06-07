@@ -64,7 +64,11 @@ if ! shopt -oq posix; then
 fi
 
 [[ -d .bash ]] || git clone https://github.com/linux478/bash.git .bash
-
-for i in .bash/*; do
-  source $i;
+cd ~/.bash
+git pull -q
+cd -
+for i in ~/.bash/*; do
+  if [[ ! $i =~ .bash/(LICENSE)$ ]]; then
+    source $i
+  fi
 done
