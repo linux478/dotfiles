@@ -112,6 +112,12 @@ if ! shopt -oq posix; then
   fi
 fi
 
+## Environment Variables
+#############################################################################
+
+## Default Editor
+EDITOR=/usr/bin/nvim 
+
 # Override PS1 with a personal setting
 
 PS1=''
@@ -137,5 +143,8 @@ PS1="${PS1}\n"     # Newline
 PS1="${PS1}\$"     # Prompt Sign
 
 
+## Aliases
+#############################################################################
 
-
+alias e="${EDITOR}"
+alias g="/home/michael/bin/git"
