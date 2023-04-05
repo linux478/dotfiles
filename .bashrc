@@ -146,5 +146,8 @@ PS1="${PS1}\$"     # Prompt Sign
 ## Aliases
 #############################################################################
 
+alias cp='cp -i'
 alias e="${EDITOR}"
 alias g="/home/michael/bin/git"
+alias mv='mv -i'
+alias rm='rm -i'
