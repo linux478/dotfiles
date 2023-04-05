@@ -112,6 +112,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
+## Environment Variables
+#############################################################################
+
 ## Default Editor
 EDITOR=/usr/bin/nvim 
 
@@ -140,5 +143,8 @@ PS1="${PS1}\n"     # Newline
 PS1="${PS1}\$"     # Prompt Sign
 
 
+## Aliases
+#############################################################################
 
+alias e="${EDITOR}"
 
