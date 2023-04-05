@@ -112,6 +112,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
+## Default Editor
+EDITOR=/usr/bin/nvim 
+
 # Override PS1 with a personal setting
 
 PS1=''
