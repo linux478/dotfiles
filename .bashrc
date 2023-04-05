@@ -111,3 +111,31 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# Override PS1 with a personal setting
+
+PS1=''
+PS1="${PS1}\u"     # Username
+PS1="${PS1}@"      # literial '@'
+PS1="${PS1}\h"     # Hostname
+PS1="${PS1} "      # literial ' '
+PS1="${PS1}\A"     # current time in 24 hour format
+PS1="${PS1} "      # literial ' '
+PS1="${PS1}("      # literial '('
+PS1="${PS1}\j"     # number of jobs running for the current user
+PS1="${PS1})"      # literial ')'
+PS1="${PS1} "      # literial ' '
+PS1="${PS1}["      # literial '['
+PS1="${PS1}\!"     # current history number
+PS1="${PS1}]"      # literial ']'
+PS1="${PS1} "      # literial ' '
+                   # add the git branch
+PS1="${PS1}$(git branch 2>/dev/null | grep '^\* ' | colrm 1 2)"
+PS1="${PS1} "      # literial ' '
+PS1="${PS1}\W"     # current working directory
+PS1="${PS1}\n"     # Newline
+PS1="${PS1}\$"     # Prompt Sign
+
+
+
+
