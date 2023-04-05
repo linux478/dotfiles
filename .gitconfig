@@ -1,0 +1,10 @@
+[init]
+	defaultBranch = main
+[user]
+	name = Michael Phillips
+	email = linux478@gmail.com
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
