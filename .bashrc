@@ -155,3 +155,20 @@ alias e="${EDITOR}"
 alias g="/home/michael/bin/git"
 alias mv='mv -i'
 alias rm='rm -i'
+
+## Aliases for calendar months
+#############################################################################
+alias cjan='cal -m 01'
+alias cfeb='cal -m 02'
+alias cmar='cal -m 03'
+alias capr='cal -m 04'
+alias cmay='cal -m 05'
+alias cjun='cal -m 06'
+alias cjul='cal -m 07'
+alias caug='cal -m 08'
+alias csep='cal -m 09'
+alias coct='cal -m 10'
+alias cnov='cal -m 11'
+alias cdec='cal -m 12'
+
+
