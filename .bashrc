@@ -188,3 +188,16 @@ sys-info() {
   printf "   %s\n" "MEMORY: $(free -m -h | awk '/Mem/{print $3"/"$2}')"
   printf "\n"
 }
+
+function git-init() {
+    if [ -z "$1" ]; then
+        printf "%s\n" "Please provide a directory name.";
+    else
+        mkdir "$1";
+        builtin cd "$1";
+        pwd;
+        git init;
+        touch readme.md .gitignore LICENSE;
+        echo "# $(basename $PWD)" >> readme.md
+    fi
+}
