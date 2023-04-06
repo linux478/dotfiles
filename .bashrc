@@ -176,6 +176,10 @@ alias cdec='cal -m 12'
 ## Functions
 #############################################################################
 
+hg() {
+    history | grep "$1";
+}
+
 sys-info() {
   printf "\n"
   printf "   %s\n" "USER: $(echo $USER)"
@@ -189,7 +193,7 @@ sys-info() {
   printf "\n"
 }
 
-function git-init() {
+git-init() {
     if [ -z "$1" ]; then
         printf "%s\n" "Please provide a directory name.";
     else
