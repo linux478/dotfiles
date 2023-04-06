@@ -22,3 +22,8 @@
   s  = status
   save = !git add -A && git commit -m 'chore: commit save point'
   undo = reset HEAD~1 --mixed
+
+[color "branch"]
+  current = green bold
+  local = green
+  remote = yellow
