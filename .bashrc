@@ -153,6 +153,7 @@ alias ..='cd ..'
 alias cp='cp -i'
 alias e="${EDITOR}"
 alias g="/home/michael/bin/git"
+alias mkdir='mkdir -p -v'
 alias mv='mv -i'
 alias rm='rm -i'
 
