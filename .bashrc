@@ -159,6 +159,16 @@ alias mv='mv -i'
 alias genpasswd='echo `env LC_CTYPE=C tr -dc "a-zA-Z0-9-_\$\?" < /dev/urandom | head -c 20`'
 alias rm='rm -i'
 
+## Shorter commands for the `Advanced Packaging Tool`
+#############################################################################
+
+alias apti="sudo apt-get install -y"
+alias aptr="sudo apt-get remove"
+alias apts="sudo apt-cache search"
+alias aptu="sudo apt-get update \
+                && sudo apt-get upgrade -y \
+                && sudo apt-get autoremove -y"
+
 ## Aliases for calendar months
 #############################################################################
 alias cjan='cal -m 01'
