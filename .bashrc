@@ -176,6 +176,10 @@ alias cdec='cal -m 12'
 ## Functions
 #############################################################################
 
+files-largest() {
+    du -h -x -s -- * | sort -r -h | head -20;
+}
+
 hg() {
     history | grep "$1";
 }
