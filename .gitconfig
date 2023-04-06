@@ -27,3 +27,14 @@
   current = green bold
   local = green
   remote = yellow
+
+[color "diff"]
+
+    frag = magenta
+    meta = yellow
+
+    new = green
+    old = red
+
+    newMoved = cyan
+    oldMoved = blue
