@@ -120,28 +120,32 @@ EDITOR=/usr/bin/nvim
 
 # Override PS1 with a personal setting
 
-PS1=''
-PS1="${PS1}\u"     # Username
-PS1="${PS1}@"      # literial '@'
-PS1="${PS1}\h"     # Hostname
-PS1="${PS1} "      # literial ' '
-PS1="${PS1}\A"     # current time in 24 hour format
-PS1="${PS1} "      # literial ' '
-PS1="${PS1}("      # literial '('
-PS1="${PS1}\j"     # number of jobs running for the current user
-PS1="${PS1})"      # literial ')'
-PS1="${PS1} "      # literial ' '
-PS1="${PS1}["      # literial '['
-PS1="${PS1}\!"     # current history number
-PS1="${PS1}]"      # literial ']'
-PS1="${PS1} "      # literial ' '
-                   # add the git branch
-PS1="${PS1}$(git branch 2>/dev/null | grep '^\* ' | colrm 1 2)"
-PS1="${PS1} "      # literial ' '
-PS1="${PS1}\W"     # current working directory
-PS1="${PS1}\n"     # Newline
-PS1="${PS1}\$"     # Prompt Sign
+PS1_PRE=''
+PS1_PRE="${PS1_PRE}\u"     # Username
+PS1_PRE="${PS1_PRE}@"      # literial '@'
+PS1_PRE="${PS1_PRE}\h"     # Hostname
+PS1_PRE="${PS1_PRE} "      # literial ' '
+PS1_PRE="${PS1_PRE}\A"     # current time in 24 hour format
+PS1_PRE="${PS1_PRE} "      # literial ' '
+PS1_PRE="${PS1_PRE}("      # literial '('
+PS1_PRE="${PS1_PRE}\j"     # number of jobs running for the current user
+PS1_PRE="${PS1_PRE})"      # literial ')'
+PS1_PRE="${PS1_PRE} "      # literial ' '
+PS1_PRE="${PS1_PRE}["      # literial '['
+PS1_PRE="${PS1_PRE}\!"     # current history number
+PS1_PRE="${PS1_PRE}]"      # literial ']'
+PS1_PRE="${PS1_PRE} "      # literial ' '
+PS1_PRE="${PS1_PRE}<"      # literial '<'
 
+# PROMPT_COMMAND GOES HERE
+
+PS1_POST=">"                 # literial '>'
+PS1_POST=${PS1_POST}" "      # literial ' '
+PS1_POST="${PS1_POST}\W"     # current working directory
+PS1_POST="${PS1_POST}\n"     # Newline
+PS1_POST="${PS1_POST}\$"     # Prompt Sign
+
+PROMPT_COMMAND='read WORKTREE < <(git worktree list 2>/dev/null | grep -v "^${HOME} " | tr -d "][") ; PS1=$(echo "${PS1_PRE}${WORKTREE##* }${PS1_POST}") '
 
 ## Aliases
 #############################################################################
