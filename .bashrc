@@ -163,6 +163,7 @@ alias mkdir='mkdir -p -v'
 alias mv='mv -i'
 alias o="xdg-open"
 alias rm='rm -i'
+alias today="date +\"%Y-%U-%m-%d-%a\""
 
 ## Shorter commands for the `Advanced Packaging Tool`
 #############################################################################
