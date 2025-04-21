@@ -1,10 +1,15 @@
+alias cat='batcat'
 alias dir='dir --color=auto'
 alias dot="$(which git) --git-dir=${HOME}/projects/dotfiles --work-tree=${HOME}"
+alias e="${EDITOR}"
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias grep='grep --color=auto'
+alias i='sudo apt install'
 alias la='ls -A'
 alias ll='ls -l'
 alias l='ls -CF'
 alias ls='ls --color=auto'
+alias r='sudo apt remove -y && sudo autoremove -y'
+alias u='sudo apt update && sudo upgrade -y'
 alias vdir='vdir --color=auto'
