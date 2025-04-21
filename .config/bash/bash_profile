@@ -1,3 +1,29 @@
-if [ -f ~/.bashrc ]; then
-  . ~/.bashrc
+# ~/.bash_profile: executed by bash for login shells.
+# see /usr/share/doc/bash/examples/startup-files (in the bash-doc package)
+# for examples
+
+# If running an interactive session and not already sourcing .bashrc,
+# source it now. This ensures that interactive shell settings are also
+# available in login shells.
+if [ -n "$PS1" ] && [ -f "$HOME/.bashrc" ]; then
+  . "$HOME/.bashrc"
 fi
+
+# Set up your PATH environment variable.
+# It's a good practice to include standard directories.
+PATH="$HOME/bin"
+PATH="$PATH:$HOME/.local/bin"
+PATH="$PATH:/usr/local/bin"
+PATH="$PATH:/usr/bin"
+PATH="$PATH:/bin"
+PATH="$PATH:/usr/sbin"
+PATH="$PATH:/sbin"
+export PATH
+
+export BROWSER='firefox'
+export CDPATH="$HOME"
+export EDITOR='nvim'
+export LC_ALL='C'
+export PAGER='less'
+
+export FCEDIT="$EDITOR"
