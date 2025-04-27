@@ -20,6 +20,7 @@
 .python_history
 .sc_history
 .stack/
+.sudo_as_admin_successful
 .surf/
 .viminfo
 .vscode/
