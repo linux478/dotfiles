@@ -1,4 +1,4 @@
-xrandr --output DP-2 --rotate right
+xrandr --output DP-2 --rotate right --right-of DP-3
 
 while :; do
   xsetroot -name "$(date +'📅 %a %d %b %Y | 🕓 %H:%M %p %Z')"
