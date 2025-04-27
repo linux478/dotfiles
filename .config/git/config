@@ -1,4 +1,18 @@
 # This is Git's per-user configuration file.
+[alias]
+	a = add
+	au = add -u
+	br = branch
+	c = commit
+	ca = commit --amend
+	can = commit --amend --no-edit
+	cm = commit -m
+	l = log --oneline -20
+	last  = log -1
+	s  = status
+	ss = status --short
+	st = status
+	sw = switch
 [user]
 # Please adapt and uncomment the following lines:
 	name = linux478
