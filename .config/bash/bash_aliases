@@ -4,11 +4,12 @@ alias dot="$(which git) --git-dir=${HOME}/projects/dotfiles --work-tree=${HOME}"
 alias e="${EDITOR}"
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
+alias g="$(which git)"
 alias grep='grep --color=auto'
 alias i='sudo apt install'
+alias l='ls -CF'
 alias la='ls -A'
 alias ll='ls -l'
-alias l='ls -CF'
 alias ls='ls --color=auto'
 alias r='sudo apt remove -y && sudo autoremove -y'
 alias u='sudo apt update && sudo upgrade -y'
