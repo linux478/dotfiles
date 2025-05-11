@@ -1,3 +1,4 @@
+alias ai='sudo apt install'
 alias as='apt-cache search'
 alias cat='batcat'
 alias dir='dir --color=auto'
