@@ -9,7 +9,7 @@ DOTFILESDIR=${HOME}/.config/dotfiles \
 ````
 
 ````
-alias dot='git --git-dir=/home/michael/.config/dotfiles --work-tree=/home/michael'
+alias dot='git --git-dir=${DOTFILESDIR} --work-tree=${HOME}'
 ````
 
 ## Personal Directory Hierarchy
@@ -23,4 +23,5 @@ alias dot='git --git-dir=/home/michael/.config/dotfiles --work-tree=/home/michae
 | `~/.local/sbin`    | Non-essential system binaries                                |
 | `~/.local/share`   | Architecture-independent data                                |
 | `~/.local/src`     | Source code non-personally maintained code                   |
+| `~/src`            | Source code being maintained by user                         |
 
