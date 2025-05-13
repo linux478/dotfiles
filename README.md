@@ -1,27 +1,26 @@
 #         d     o     t     f     i     l     e     s
-# .oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oO
+<!-- .oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oO -->
 
 ## Installation
 
-````
-DOTFILESDIR=${HOME}/.config/dotfiles \
-&& mkdir -p ${DOTFILESDIR}
-````
+. Create the directory for the dotfile repository
 
 ````
-alias dot='git --git-dir=${DOTFILESDIR} --work-tree=${HOME}'
+export DOTFILESDIR=${HOME}/.config/dotfiles
 ````
 
-## Personal Directory Hierarchy
+. Clone the dotfile repository
 
-| Directory          | Description                                                  |
-|--------------------|--------------------------------------------------------------|
-| `~/.local/bin`     | Most user commands                                           |
-| `~/.local/include` | Header files for C programming                               |
-| `~/.local/lib`     | Libraries for programs in `~/.local/bin` and `~/.local/sbin` |
-| `~/.local/local`   | Locally installed software                                   |
-| `~/.local/sbin`    | Non-essential system binaries                                |
-| `~/.local/share`   | Architecture-independent data                                |
-| `~/.local/src`     | Source code non-personally maintained code                   |
-| `~/src`            | Source code being maintained by user                         |
+````
+git clone --bare git@github.com:linux478/dotfiles.git ${DOTFILESDIR}
+git --git-dir=${DOTFILESDIR} --work-tree=${HOME} checkout
 
+if [ $? = 0 ]; then
+  echo "Checked out dot files.";
+else
+  echo "Backing up pre-existing dot files.";
+  git --git-dir=${DOTFILESDIR} --work-tree=${HOME} checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | xargs -I{} cp -iv {} {}.org
+fi;
+
+git --git-dir=${DOTFILESDIR} --work-tree=${HOME} checkout
+````
